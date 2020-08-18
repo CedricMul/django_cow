@@ -34,7 +34,8 @@ def index(request):
     return render(request, 'index.html', {'form': form})
 
 def history_view(request):
+    #search by reverse ID
     cows = CowsayModel.objects.all().order_by('-id')
-    #cows = cows.reverse()
+    #last 10
     history = cows[:10]
     return render(request, 'history.html', {'history': history})
