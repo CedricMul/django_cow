@@ -1,0 +1,7 @@
+<a href="/">Home</a> <a href="/history/">History</a>
+<div><pre>{{ cow_state }}</pre></div>
+<form action='' method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
